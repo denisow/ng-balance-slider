@@ -1,5 +1,43 @@
 <div>
 <div class="slidecontainer">
-  <input type="range" min="-10" max="10" value="0" class="slider" id="myRange">
+  <input
+    class="slider"
+    type="range"
+    min="-10"
+    max="10"
+    [(ngModel)]="value"
+    (ngModelChange)="onChange($event)"
+
+    (abort)="onAbort($event)"
+    (beforeinput)="onBeforeinput($event)"
+    (blur)="onBlur($event)"
+    (click)="onClick($event)"
+    (compositionstart)="onCompositionstart($event)"
+    (compositionupdate)="onCompositionupdate($event)"
+    (compositionend)="onCompositionend($event)"
+    (dblclick)="onDblclick($event)"
+    (error)="onError($event)"
+    (focus)="onFocus($event)"
+    (focusin)="onFocusin($event)"
+    (focusout)="onFocusout($event)"
+    (input)="onInput($event)"
+    (keydown)="onKeydown($event)"
+    (keypress)="onKeypress($event)"
+    (keyup)="onKeyup($event)"
+    (load)="onLoad($event)"
+    (mousedown)="onMousedown($event)"
+    (mouseenter)="onMouseenter($event)"
+    (mouseleave)="onMouseleave($event)"
+    (mousemove)="onMousemove($event)"
+    (mouseout)="onMouseout($event)"
+    (mouseover)="onMouseover($event)"
+    (mouseup)="onMouseup($event)"
+    (resize)="onResize($event)"
+    (scroll)="onScroll($event)"
+    (select)="onSelect($event)"
+    (unload)="onUnload($event)"
+    (wheel)="onWheel($event)"
+
+    >
 </div>
 </div>
