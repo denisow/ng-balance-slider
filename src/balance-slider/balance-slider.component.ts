@@ -9,6 +9,8 @@ import { Component } from '@angular/core';
 })
 export class balanceSliderComponent {
     public value: number = 0;
+    public over: boolean = false;
+    public active: boolean = false;
 
     public onChange (event){
         console.log('onChange',event)
@@ -66,6 +68,7 @@ export class balanceSliderComponent {
         console.log('onLoad',event);
     }
     public onMousedown(event){
+        this.active = true;
         console.log('onMousedown',event);
     }
     public onMouseenter(event){
@@ -78,12 +81,16 @@ export class balanceSliderComponent {
         // console.log('onMousemove',event);
     }
     public onMouseout(event){
+        this.over = false;
+        this.active = false;
         console.log('onMouseout',event);
     }
     public onMouseover(event){
+        this.over = true;
         console.log('onMouseover',event);
     }
     public onMouseup(event){
+        this.active = false;
         console.log('onMouseup',event);
     }
     public onResize(event){
